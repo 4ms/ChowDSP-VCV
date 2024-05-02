@@ -50,7 +50,8 @@ struct SSEComplex
     {
         if (r.size() != 4 && i.size() != 4)
         {
-            throw std::invalid_argument("Initialize lists must be of size 4");
+			return;
+            // throw std::invalid_argument("Initialize lists must be of size 4");
         }
         float rfl alignas(16)[4], ifl alignas(16)[4];
         for (int q = 0; q < 4; ++q)
