@@ -31,23 +31,23 @@ namespace MixingMatrixUtils
     /** Write matrix to log (useful for debugging) */
     template<size_t N>
     void logMatrix (Matrix<N>& matrix) {
-        std::stringstream ss;
-        for (int row = 0; row < matrix.dim; ++row)
-        {
-            for (int col = 0; col < matrix.dim; ++col)
-            {
-                if (matrix.matrix[row][col] >= 0.0f)
-                    ss << '+';
+        // std::stringstream ss;
+        // for (int row = 0; row < matrix.dim; ++row)
+        // {
+        //     for (int col = 0; col < matrix.dim; ++col)
+        //     {
+        //         if (matrix.matrix[row][col] >= 0.0f)
+        //             ss << '+';
 
-                ss << std::fixed << std::setprecision (4) << matrix.matrix[row][col];
+        //         ss << std::fixed << std::setprecision (4) << matrix.matrix[row][col];
 
-                if (col < matrix.dim - 1)
-                    ss << ", ";
-            }
-            ss << '\n';
-        }
+        //         if (col < matrix.dim - 1)
+        //             ss << ", ";
+        //     }
+        //     ss << '\n';
+        // }
 
-        std::cout << ss.str() << std::endl;
+        // std::cout << ss.str() << std::endl;
     }
 
     // Create identity matrix
